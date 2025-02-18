@@ -1,12 +1,16 @@
-import Layout from "./layout";
-import { Typography } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Packages from "./components/Packages";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <Layout>
-      <Typography variant="h4" align="center">
-        Welcome to Astro Shweta's Consultation Services
-      </Typography>
-    </Layout>
+    <>
+      <Hero />
+      <Packages />
+      <About />
+      <Contact />
+    </>
   );
 }
