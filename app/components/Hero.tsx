@@ -5,14 +5,15 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        height: "80vh",
+        height: "60vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        background: "url('/hero-bg.jpg') center/cover no-repeat",
+        background: "url('/hero.jpg') center/cover no-repeat",
         color: "white",
+        width: "100%",
       }}
     >
       <Typography variant="h3" fontWeight={700}>Unlock Your Future</Typography>
@@ -24,4 +25,4 @@ const Hero = () => {
   );
 };
 
-export default Hero
+export default Hero;
