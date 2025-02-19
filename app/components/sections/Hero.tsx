@@ -1,5 +1,6 @@
 "use client";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import CustomButton from "../ui/CustomButton";
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
       <Typography variant="h6" mt={2}>
         Personalized Astrology Sessions for Clarity & Guidance
       </Typography>
-      <Button variant="contained" color="secondary" sx={{ mt: 3 }}>Book Now</Button>
+      <CustomButton >Book Now</CustomButton>
     </Box>
   );
 };
