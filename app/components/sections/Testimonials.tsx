@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import { testimonials } from "@/app/utils/constants";
+
 const CustomCarousel = styled.div`
   .slick-dots li button:before {
     color: white !important;  /* Change dot color to white */
@@ -17,7 +18,6 @@ const stats = [
   { label: "Consultations", value: "2k+" },
   { label: "Lives Transformed", value: "4k+" },
   { label: "Clients from Countries", value: "10+" },
-];
 
 const Testimonials = () => {
   return (
@@ -39,7 +39,6 @@ const Testimonials = () => {
         ))}
       </Grid>
       </Box>
-
       <Box sx={{ mt: 4,textAlign:"center", margin: '50' }}>
       <CustomCarousel>
       <Carousel
