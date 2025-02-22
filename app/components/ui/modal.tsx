@@ -5,7 +5,7 @@ import { useMediaQuery } from '@mui/material'; // Import to handle media queries
 
 // Define style for the modal with mobile responsiveness
 const style = {
-  position: 'absolute' as 'absolute',
+  position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',

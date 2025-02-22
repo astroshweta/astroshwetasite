@@ -17,7 +17,7 @@ type CardPropsType = {
   id: number;
 };
 
-const Card = ({ title, price, description, id }: CardPropsType) => {
+const Card = ({ title, description, id }: CardPropsType) => {
   const [openModal, setOpenModal] = useState(false);
   const [modalContent, setModalContent] = useState<React.ReactNode>(<></>);
 
@@ -63,7 +63,6 @@ const Card = ({ title, price, description, id }: CardPropsType) => {
         </CustomButton>
       </div>
 
-      {/* Render the modal with the content inside */}
       <PackageModal open={openModal} handleClose={handleCloseModal} packageComp={modalContent} />
     </div>
   );
