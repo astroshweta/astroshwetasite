@@ -1,8 +1,8 @@
-import Hero from "./components/Hero";
-import Packages from "./components/Packages";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Testimonials from "./components/Testimonials";
+import Hero from "./components/sections/Hero";
+import Packages from "./components/sections/Packages";
+import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import Testimonials from "./components/sections/Testimonials";
 
 export default function Home() {
   return (
