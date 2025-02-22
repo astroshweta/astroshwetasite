@@ -29,7 +29,7 @@ const Navbar = () => {
 
 
     return (
-      <header className={` w-full z-50 ${isFixed ? "fixed top-0 bg-[#e8c83e] is-sticky" : "relative"}`}>
+      <header className={` w-full z-30 ${isFixed ? "fixed top-0 bg-[#e8c83e] is-sticky" : "relative"}`}>
     <div className="container">
         <div className="flex items-center justify-between">
 

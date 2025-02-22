@@ -11,8 +11,8 @@ const Packages = () => {
               <div className="row justify-content-center">
                   <div className="col-xl-12">
                       <SectionTitle className="text-center">
-                          <SectionTitle.Title>My Pricing</SectionTitle.Title>
-                            <SectionTitle.Title>Choose your pricing plan</SectionTitle.Title>
+                          <SectionTitle.Title>Services Offered</SectionTitle.Title>
+                            <SectionTitle.Title>Choose your plan to know more</SectionTitle.Title>
                             <br/>
                       </SectionTitle>
                   </div>
