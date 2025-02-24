@@ -5,6 +5,7 @@ import Testimonials from "./components/sections/Testimonials";
 import Navbar from "./components/sections/Navbar";
 import Image from "next/image";
 import { Container } from "@mui/material";
+import Footer from "./components/sections/Footer";
 export default function Home() {
   return (
     <>
@@ -66,6 +67,7 @@ export default function Home() {
           <About />
           <Testimonials />
           <Contact />
+          <Footer />
         </Container>
         
       </section>

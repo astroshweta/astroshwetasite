@@ -1,16 +1,11 @@
 const Footer = () => {
   return (
-      <footer className="pt-[90px] pb-10">
+      <footer className="pt-[100px] pb-10">
           <div className="container">
-              <p className="text-center text-white">
-                  Copyright @{new Date().getFullYear()}, <a href="#" className="text-primary">Astro with Swetha</a> All
-                  Rights Reserved.
-              </p>
+              
               <ul className="flex justify-center flex-wrap gap-x-10 gap-y-4 mt-4">
-                  <li><a href="#" className="text-gray font-normal">Facebook</a></li>
-                  <li><a href="#" className="text-gray font-normal">Twitter</a></li>
-                  <li><a href="#" className="text-gray font-normal">Instagram</a></li>
-                  <li><a href="#" className="text-gray font-normal">LinkedIn</a></li>
+                  <li><a href="#" className="text-[#e8c83e] font-normal">YouTube</a></li>
+                  <li><a href="#" className="text-[#e8c83e] font-normal">Instagram</a></li>
               </ul>
           </div>
       </footer>
