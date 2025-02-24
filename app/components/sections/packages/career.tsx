@@ -1,62 +1,53 @@
 import React from 'react';
 import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
-import {CAREER_HEAD} from './constants';
+import { CAREER_HEAD } from './constants';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import WorkIcon from '@mui/icons-material/Work';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const CareerConsultation = () => {
-
-  const listItemStyle = {
-    listStyleType: 'disc',
-    //paddingLeft: '20px', 
-    '&::marker': {
-      color: '#black', 
-    }
+  const handleButtonClick = () => {
+    window.open('https://rzp.io/rzp/SaoWX6NG', '_blank');
   };
 
   return (
     <section className="consultation-section" style={{ padding: '30px', backgroundColor: '#f9f9f9' }}>
       <Container maxWidth="md">
-        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
+        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c', textAlign: 'center' }}>
           {CAREER_HEAD}
         </Typography>
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
+        <Typography variant="body1" paragraph style={{ color: '#555', textAlign: 'center' }}>
           Unlock Your True Career Potential
         </Typography>
-        
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
-          This in-depth career consultation will help you explore whether your current profession aligns with your true potential. Together, we’ll uncover the right career paths for your personal growth based on your unique birth chart. Here’s what you’ll gain from the consultation:
+
+        <Typography variant="body1" paragraph style={{ color: '#555', marginBottom: '30px' }}>
+          This in-depth career consultation will help you explore whether your current profession aligns with your true potential. 
+          Together, we’ll uncover the right career paths for your personal growth based on your unique birth chart.
         </Typography>
-        
+
         <div style={{ marginBottom: '30px' }}>
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             What You’ll Discover:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
+              <WorkIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary={<strong>Is Your Current Career Right for You?</strong>} secondary="Determine if your present career field is in harmony with your personal strengths." />
             </ListItem>
             <ListItem>
+              <TrendingUpIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary={<strong>Best Career Options for Your Growth:</strong>} secondary="Identify career paths that best align with your astrological chart and growth potential." />
             </ListItem>
             <ListItem>
+              <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary={<strong>Ideal Time for Career Changes:</strong>} secondary="Learn when the right time is to switch jobs or even change industries." />
             </ListItem>
             <ListItem>
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary={<strong>Should You Pursue a Job or Start a Business?</strong>} secondary="Understand whether a traditional job or entrepreneurial journey is more suitable for you." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Your Career Purpose:</strong>} secondary="Gain clarity on your purpose, specific to your career, through astrological insights." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Is Entrepreneurship for You?</strong>} secondary="Find out if starting a business aligns with your chart, and if so, which industry suits you best." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Business Expansion Insights:</strong>} secondary="Planning to expand your business? Get detailed guidance on the best times, strategies, and locations for growth." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Personalized Remedies for Career Success:</strong>} secondary="Receive tailored remedies to improve your career prospects, boost your growth, and overcome obstacles." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Additional Career-related Queries:</strong>} secondary="Ask any other specific questions you may have regarding your career trajectory." />
             </ListItem>
           </List>
         </div>
@@ -65,21 +56,18 @@ const CareerConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             Recommended for:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary="Individuals uncertain about their current career path" />
             </ListItem>
             <ListItem>
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary="Those considering a career change" />
             </ListItem>
             <ListItem>
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary="Professionals looking for job changes or opportunities" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="People seeking career stability or success" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Entrepreneurs planning to expand or start a business" />
             </ListItem>
           </List>
         </div>
@@ -88,12 +76,14 @@ const CareerConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             Required Information:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary={<strong>Current Profession & Situation:</strong>} secondary="Please provide a brief overview of your current career, challenges, and goals." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Current Profession & Situation:</strong>} secondary="Provide an overview of your current career, challenges, and goals." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Your Top 3 Career Questions:</strong>} secondary="Share three detailed questions you’d like me to address in-depth." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Your Top 3 Career Questions:</strong>} secondary="Share three detailed questions you’d like answered." />
             </ListItem>
           </List>
         </div>
@@ -102,18 +92,22 @@ const CareerConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             What You Will Receive:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary={<strong>An MP3 audio file</strong>} secondary="Where I, Shweta, will answer your questions in-depth (8-15 minutes based on the complexity of your questions)." />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Your Birth Chart PDF:</strong>} secondary="Detailed PDF containing your D1, divisional charts, planetary placements, and compatibility analysis." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Written summaries</strong>} secondary="Of my answers for you to revisit at any time." />
+              <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized audio answering your questions (8-15 minutes)." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Personalized remedies</strong>} secondary="For improving your career growth." />
+              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Written Summary:</strong>} secondary="Comprehensive written answers, including remedies and suggestions for your marriage." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>All files</strong>} secondary="Will be sent to your email/whatsapp within 8-10 days." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Timeline for Delivery:</strong>} secondary="You will receive all materials via email in 5-7 days." />
             </ListItem>
           </List>
         </div>
@@ -123,8 +117,15 @@ const CareerConsultation = () => {
             variant="contained" 
             color="primary" 
             size="large" 
-            onClick={() => alert("Get Started with Consultation")}
-            style={{ padding: '10px 20px', fontSize: '1.2rem' }}
+            onClick={handleButtonClick}
+            sx={{
+              padding: '10px 20px',
+              fontSize: '1.2rem',
+              backgroundColor: '#ff1493',
+              '&:hover': {
+                backgroundColor: '#ff69b4',
+              }
+            }}
           >
             Book Now 499/-
           </Button>

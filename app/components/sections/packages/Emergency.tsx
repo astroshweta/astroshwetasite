@@ -1,28 +1,25 @@
 import React from 'react';
 import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { EMERGENCY_HEAD } from './constants';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 
 const EmergencyConsultation = () => {
-
-  const listItemStyle = {
-    listStyleType: 'disc', 
-    paddingLeft: '20px', 
-    '&::marker': {
-      color: '#ff4500', 
-    }
+  const handleButtonClick = () => {
+    window.open('https://rzp.io/rzp/KdiQDwNV', '_blank');
   };
-
   return (
     <section className="consultation-section" style={{ padding: '30px', backgroundColor: '#f9f9f9' }}>
       <Container maxWidth="md">
-        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
+        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c', textAlign: 'center' }}>
           {EMERGENCY_HEAD}
         </Typography>
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
+        <Typography variant="body1" paragraph style={{ color: '#555', textAlign: 'center' }}>
           Immediate Consultation for Urgent Matters
         </Typography>
 
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
+        <Typography variant="body1" paragraph style={{ color: '#555', marginBottom: '30px' }}>
           This emergency consultation offers you the ability to get answers and guidance without waiting for a scheduled time slot. If you're facing a time-sensitive issue or need quick guidance, I am here to assist you in real-time. You’ll receive instant consultation on any topic.
         </Typography>
 
@@ -30,89 +27,87 @@ const EmergencyConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             What You’ll Discover:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary="Immediate Answers to Urgent Questions" secondary="Get direct answers and guidance without the wait." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Immediate Answers to Urgent Questions:</strong>} secondary="Get direct answers and guidance without the wait." />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Quick Solutions for Time-Sensitive Issues" secondary="Receive prompt solutions to any problem that requires immediate attention." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Quick Solutions for Time-Sensitive Issues:</strong>} secondary="Receive prompt solutions to any problem that requires immediate attention." />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Instant Guidance on Any Matter" secondary="Whether it’s life decisions, career, relationships, or health, get real-time advice." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Instant Guidance on Any Matter:</strong>} secondary="Whether it’s life decisions, career, relationships, or health, get real-time advice." />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Personalized Action Plan" secondary="Receive a tailored action plan to resolve your urgent issue, based on your specific needs." />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Personalized Action Plan:</strong>} secondary="Receive a tailored action plan to resolve your urgent issue, based on your specific needs." />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Confidential and Focused Consultation" secondary="Your consultation will be private and dedicated to solving your urgent concerns." />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Confidential and Focused Consultation:</strong>} secondary="Your consultation will be private and dedicated to solving your urgent concerns." />
             </ListItem>
           </List>
         </div>
-
         <div style={{ marginBottom: '30px' }}>
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             Recommended for:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary="Individuals facing urgent issues or crises" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="Anyone with a burning question or concern" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="People in need of quick decision-making guidance" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="Individuals seeking professional guidance on various matters" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Anyone in a time-sensitive situation needing immediate advice" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="Those who prefer a personal, one-on-one consultation" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="Those who cannot wait for a scheduled consultation" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="People in need of immediate guidance on a specific issue" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="People facing life-changing decisions that need to be addressed urgently" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="Those unsure about their next steps in any area of life" />
+            </ListItem>
+          </List>
+        </div>
+        <div style={{ marginBottom: '30px' }}>
+          <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
+            Required Information for Consultation::
+          </Typography>
+          <List>
+            <ListItem>
+              <PersonSearchIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Your Detailed Question or Concern</strong>} secondary="Provide a detailed description of the issue or question you'd like to address." />
+            </ListItem>
+            <ListItem>
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Any Relevant Background Information</strong>} secondary="Any relevant background information or context to better understand your situation." />
             </ListItem>
           </List>
         </div>
 
-        <div style={{ marginBottom: '30px' }}>
-          <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
-            Required Information for Consultation:
-          </Typography>
-          <List sx={listItemStyle}>
-            <ListItem>
-              <ListItemText primary="Your Urgent Question or Concern" secondary="Describe your issue or question in detail, highlighting the urgency." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Relevant Context for Immediate Resolution" secondary="Any background information that will help me address your situation quickly." />
-            </ListItem>
-          </List>
-        </div>
-
-        <div style={{ marginBottom: '30px' }}>
-          <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
-            What You Will Receive:
-          </Typography>
-          <List sx={listItemStyle}>
-            <ListItem>
-              <ListItemText primary="Immediate Consultation" secondary="A live consultation with immediate answers and guidance." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Audio Recording of the Consultation" secondary="Receive an MP3 recording of your consultation for future reference." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Written Summary of Key Insights" secondary="A written summary to help you navigate the insights provided during the consultation." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Emergency Session Delivery" secondary="Receive your session's details within the same day." />
-            </ListItem>
-          </List>
-        </div>
 
         <div style={{ textAlign: 'center' }}>
           <Button 
             variant="contained" 
             color="primary" 
             size="large" 
-            onClick={() => alert("Book your Emergency Consultation now!")}
-            style={{ padding: '10px 20px', fontSize: '1.2rem' }}
+            onClick={handleButtonClick}
+            sx={{
+              padding: '10px 20px',
+              fontSize: '1.2rem',
+              backgroundColor: '#ff1493',
+              '&:hover': {
+                backgroundColor: '#ff69b4',
+              }
+            }}
           >
             Book Now 1499/-
           </Button>
