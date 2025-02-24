@@ -12,7 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import CustomButton from "../ui/CustomButton";
 import emailjs from "@emailjs/browser";
-
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -43,7 +42,7 @@ const Contact = () => {
           alert("SUCCESS! We will contact You");
           formRef.current?.reset();
         },
-        (error) => {
+        (error : any) => {
           alert("Something went wrong please try later..");
           console.log(error.text);
         }
@@ -116,7 +115,7 @@ const Contact = () => {
             <span className="contact-form contact-form-area overflow-hidden">
               <form
                 ref={formRef}
-                onSubmit={sendEmail}
+                onSubmit={sendEmail} // Changed here to use onSubmit on the form
                 className="contactForm"
                 name="contactForm"
               >
@@ -235,7 +234,7 @@ const Contact = () => {
 
                   <div className="md:col-span-2 col-auto ml-2">
                     <div className="relative mb-0">
-                      <CustomButton type="submit" onClick={(e) => sendEmail(e)}>
+                      <CustomButton type="submit">
                         Send Me Message{" "}
                         <FontAwesomeIcon icon={faAngleRight} fontSize={14} />
                       </CustomButton>
