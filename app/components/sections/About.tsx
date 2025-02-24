@@ -12,8 +12,8 @@ const About = () => {
             <div>
               <div className="about-image-part relative">
                 <img src="/me.png" alt="About Me" className="rounded-[35px]" />
-                <div className="flex items-center rounded-[32px] bg-primary py-2.5 pr-[25px] pl-[15px] absolute left-[25%] bottom-[25%]">
-                  <h6 className="font-bold text-black">Available for Work</h6>
+                <div className="flex items-center rounded-[32px] bg-[#e8c83e] py-2.5 pr-[25px] pl-[15px] absolute left-[25%] bottom-[25%]">
+                  <h6 className="font-bold text-black">Available for review</h6>
                   <div className="w-[15px] h-[15px] rounded-full bg-[#19461a] ml-3 pulse" />
                 </div>
                 <div className="absolute -left-[10%] top-[25%] rotated_circle">
