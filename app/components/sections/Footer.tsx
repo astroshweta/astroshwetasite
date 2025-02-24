@@ -3,7 +3,7 @@ const Footer = () => {
       <footer className="pt-[90px] pb-10">
           <div className="container">
               <p className="text-center text-white">
-                  Copyright @{new Date().getFullYear()}, <a href="#" className="text-primary">Liam</a> All
+                  Copyright @{new Date().getFullYear()}, <a href="#" className="text-primary">Astro with Swetha</a> All
                   Rights Reserved.
               </p>
               <ul className="flex justify-center flex-wrap gap-x-10 gap-y-4 mt-4">
