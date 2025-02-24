@@ -1,66 +1,94 @@
 "use client";
-import { Box, Typography, Grid, Card, CardContent } from "@mui/material";
-import Carousel from 'react-slick'; // Add this for carousel functionality
-import "slick-carousel/slick/slick.css"; 
+import { Box } from "@mui/material";
+import Carousel from "react-slick"; // Add this for carousel functionality
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styled from "styled-components";
-import { testimonials } from "@/app/utils/constants";
-const CustomCarousel = styled.div`
-  .slick-dots li button:before {
-    color: white !important;  /* Change dot color to white */
-  }
+import { testimonials, stats } from "@/app/utils/constants";
+import SectionTitle from "../ui/SectionTitle";
 
-  .slick-dots li.slick-active button:before {
-    color: white !important; /* Active dot color */
-  }`;
-const stats = [
-  { label: "Consultations", value: "2k+" },
-  { label: "Lives Transformed", value: "4k+" },
-  { label: "Clients from Countries", value: "10+" },
-];
+const settings = {
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  infinite: true,
+  speed: 500,
+  arrows: true,
+  slidesToShow: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
 const Testimonials = () => {
   return (
     <>
-    <Box id="testimonials" sx={{ textAlign: "center", padding: 4 }}>
-      <Typography variant="h5" fontWeight={700} color="primary">What Clients Say</Typography>
-      
-      {/* Stats Section */}
-      <Grid container spacing={3} justifyContent="center" sx={{ mt: 3 }}>
-        {stats.map((stat) => (
-          <Grid item xs={12} sm={6} md={3} key={stat.label}>
-            <Card sx={{ boxShadow: 3, borderRadius: 2 }}>
-              <CardContent>
-                <Typography variant="h4" fontWeight={700} color="primary">{stat.value}</Typography>
-                <Typography variant="body1" color="textSecondary">{stat.label}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-      </Box>
+      <Box id="testimonials" sx={{ textAlign: "center", padding: 4 }}>
+        <section id="home" className="pt-[90px] mb-[90px]">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-lg-12 col-sm-12">
+                <div
+                  className="sm:w-4/5 mx-auto my-0 sm:px-10 px-5 py-[35px] rounded-[100px] bg-[#e8c83e] 
+                        flex flex-col sm:flex-row justify-around items-center gap-4"
+                >
+                  {stats.map((item, index) => (
+                    <div
+                      key={index}
+                      className="text-center flex flex-col justify-center items-center"
+                    >
+                      <span className="leading-none font-bold text-center lg:text-[50px] text-3xl">
+                        {item.value}
+                      </span>
+                      <span className="counter-title lg:text-base text-sm font-normal mt-1.5">
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <Box sx={{ mt: 4,textAlign:"center", margin: '50' }}>
-      <CustomCarousel>
-      <Carousel
-        dots={true}
-        autoplay={true}
-        autoplaySpeed={5000}
-        infinite={true}
-        speed={500}
-        arrows={true}
-      >
-          {testimonials.map((review, index) => (
-            <Box key={index} sx={{ px: 3 }}>
-              <Typography variant="body1" sx={{ fontStyle: 'italic', fontSize: '1.1rem', color: "textSecondary" }}>
-                "{review}"
-              </Typography>
-            </Box>
+        <div className="row justify-content-center">
+          <div className="col-xl-12">
+            <SectionTitle className="text-center">
+              <SectionTitle.Title>
+                What <span className="text-[#e8c83e]">Amazing</span> peoples
+                Says About me
+              </SectionTitle.Title>
+            </SectionTitle>
+          </div>
+        </div>
+      </Box>
+      <div className="mt-15">
+        <Carousel {...settings}>
+          {testimonials.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-between text-center p-6 border border-gray-600 rounded-2xl text-gray-300 w-full max-w-lg mx-auto min-h-[180px] shadow-lg h-[300px]"
+            >
+              <p className="text-lg font-light leading-relaxed flex-grow">
+                {item.review}
+              </p>
+              <div className="mt-auto flex flex-col items-center">
+                <h5 className="text-xl font-semibold text-white">
+                  {item.name}
+                </h5>
+                <p className="text-sm font-medium text-yellow-400">
+                  Consultation Review
+                </p>
+              </div>
+            </div>
           ))}
         </Carousel>
-        </CustomCarousel>
-      </Box>
-</>
+      </div>
+    </>
   );
 };
 
