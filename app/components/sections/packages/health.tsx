@@ -1,63 +1,48 @@
 import React from 'react';
 import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { HEALTH_HEAD } from './constants';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import PersonSearchIcon from '@mui/icons-material/PersonSearch';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 const HealthConsultation = () => {
-
-  // Global list item style
-  const listItemStyle = {
-    listStyleType: 'disc', // Style of the bullet (can be disc, circle, square, etc.)
-    paddingLeft: '20px', // Indentation for the bullets
-    '&::marker': {
-      color: '#ff6347', // Bullet color (changed to a health-related color)
-    }
+  const handleButtonClick = () => {
+    window.open('https://rzp.io/rzp/uAsz2OJZ', '_blank');
   };
-
+  
   return (
     <section className="consultation-section" style={{ padding: '30px', backgroundColor: '#f9f9f9' }}>
       <Container maxWidth="md">
-        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
+        <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: '#14521c', textAlign: 'center' }}>
           {HEALTH_HEAD}
         </Typography>
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
-          Optimize Your Health and Well-being
-        </Typography>
 
-        <Typography variant="body1" paragraph style={{ color: '#555' }}>
-          This health consultation provides insights into your physical, mental, and emotional well-being. Based on your birth chart, I will analyze your health potentials, areas of concern, and remedies for improving your life quality. Here's what you can expect:
+        <Typography variant="body1" paragraph style={{ color: '#555', marginBottom: '30px' }}>
+          This health consultation provides insights into your physical, mental, and emotional well-being. Based on your birth chart, I will analyze your health potentials, areas of concern, and remedies for improving your life quality.
         </Typography>
 
         <div style={{ marginBottom: '30px' }}>
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             What You’ll Discover:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary={<strong>Your Physical Health Insights:</strong>} secondary="Identify the strengths and weaknesses in your physical health based on your astrological chart." />
+              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Physical Health Insights:</strong>} secondary="Identify the strengths and weaknesses in your physical health based on your astrological chart." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Emotional and Mental Well-being:</strong>} secondary="Understand how your emotional state and mental health can be influenced by planetary placements." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Mental and Emotional Well-being:</strong>} secondary="Understand how planetary placements affect your emotional state and mental health." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Prone to Specific Health Conditions:</strong>} secondary="Find out what health conditions you are more prone to based on astrological factors." />
+              <PersonSearchIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Health Conditions You May Be Prone To:</strong>} secondary="Find out potential health challenges based on astrological factors." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Appropriate Health Remedies:</strong>} secondary="Receive personalized remedies to improve your health and manage any weaknesses or concerns." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Best Times for Health Changes:</strong>} secondary="Learn when it's the best time to make changes in your health routine or undergo treatments." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Astrological Health Chart for Wellness:</strong>} secondary="Receive a detailed health chart showing the strengths and challenges of your physical and mental health." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Diet and Lifestyle Tips:</strong>} secondary="Get insights on the best dietary habits and lifestyle changes based on your astrological profile." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Potential for Stress or Anxiety:</strong>} secondary="Gain insight into stress triggers and how to manage emotional fluctuations through remedies and practices." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Fitness and Exercise Recommendations:</strong>} secondary="Discover the best exercise and fitness routines for your body type and health needs." />
+              <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Best Times for Health Changes:</strong>} secondary="Discover the most favorable times for making health-related changes." />
             </ListItem>
           </List>
         </div>
@@ -66,21 +51,14 @@ const HealthConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             Recommended for:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary="Individuals seeking a health boost or dealing with chronic issues" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="Individuals seeking to boost their health or manage chronic issues" />
             </ListItem>
             <ListItem>
-              <ListItemText primary="People experiencing mental or emotional imbalances" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Those looking for personalized health advice and remedies" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Anyone looking to optimize their health and wellness routines" />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="Individuals interested in astrology-based health insights" />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary="People experiencing emotional or mental imbalances" />
             </ListItem>
           </List>
         </div>
@@ -89,15 +67,14 @@ const HealthConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             Required Information for Consultation:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary={<strong>Your Health History & Concerns:</strong>} secondary="Please provide details on any health issues you are currently facing, both physical and mental." />
+              <PersonSearchIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Health History & Concerns:</strong>} secondary="Provide details on any health issues, both physical and mental." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Your Top 3 Health Questions:</strong>} secondary="Share three specific questions regarding your health or well-being that you'd like me to address." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Your Birth Details:</strong>} secondary="I will need your birth time, date, and place to analyze your health-related astrological chart in-depth." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Your Top 3 Health Questions:</strong>} secondary="Submit specific questions related to your well-being for analysis." />
             </ListItem>
           </List>
         </div>
@@ -106,21 +83,22 @@ const HealthConsultation = () => {
           <Typography variant="h6" component="h3" gutterBottom style={{ fontWeight: 'bold', color: '#14521c' }}>
             What You Will Receive:
           </Typography>
-          <List sx={listItemStyle}>
+          <List>
             <ListItem>
-              <ListItemText primary={<strong>Health Chart PDF</strong>} secondary="Detailed PDF file with your birth chart, analysis of your health-related planetary positions, and more." />
+              <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Health Chart PDF:</strong>} secondary="A comprehensive PDF detailing your birth chart and health analysis." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>MP3 Audio File of My Insights</strong>} secondary="In-depth audio recording (8-15 mins) of your health-related questions answered by me (Jay)." />
+              <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized 8-15 minute audio recording answering your health queries." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Written Summary of Answers</strong>} secondary="Receive a written summary of my answers to refer to whenever you need." />
+              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Written Summary:</strong>} secondary="A document covering remedies, health guidance, and analysis." />
             </ListItem>
             <ListItem>
-              <ListItemText primary={<strong>Personalized Health Remedies</strong>} secondary="Tailored recommendations for improving your health based on your unique astrological chart." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary={<strong>Timeline for Delivery</strong>} secondary="You will receive the files in your email within 24-27 days." />
+              <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
+              <ListItemText primary={<strong>Delivery Timeline:</strong>} secondary="All materials will be sent via email within 24-27 days." />
             </ListItem>
           </List>
         </div>
@@ -130,8 +108,15 @@ const HealthConsultation = () => {
             variant="contained" 
             color="primary" 
             size="large" 
-            onClick={() => alert("Get Started with Health Consultation")}
-            style={{ padding: '10px 20px', fontSize: '1.2rem' }}
+            onClick={handleButtonClick}
+            sx={{
+              padding: '10px 20px',
+              fontSize: '1.2rem',
+              backgroundColor: '#ff1493',
+              '&:hover': {
+                backgroundColor: '#ff69b4',
+              }
+            }}
           >
             Book Now 499/-
           </Button>

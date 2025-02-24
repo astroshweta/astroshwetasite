@@ -56,10 +56,10 @@ const Contact = () => {
           <div className="col-lg-4">
             <div className="contact-content-part pt-5 rpt-0 rmb-25 wow fadeInUp delay-0-2s">
               <SectionTitle className="mb-10">
-                <SectionTitle.Title>Contact me</SectionTitle.Title>
+                <SectionTitle.Title>Having</SectionTitle.Title>
                 <SectionTitle.Title>
-                  Let’s Talk About your{" "}
-                  <span className="text-[#e8c83e]">Future</span>
+                  troubles in booking Or looking to {" "}
+                  <span className="text-[#e8c83e]">Collaborate?</span>
                 </SectionTitle.Title>
                 <SectionTitle.Description>
                   It is a long-known fact that the stars can guide us, helping
@@ -91,7 +91,7 @@ const Contact = () => {
                   <strong className="text-lg text-white font-medium capitalize">
                     contact number:
                   </strong>
-                  <p>+91 80957 07975</p>
+                  <p>+91 6362668282</p>
                 </div>
               </span>
 
@@ -105,7 +105,7 @@ const Contact = () => {
                   <strong className="text-lg text-white font-medium capitalize">
                     Email us:
                   </strong>
-                  <p>work@work.com</p>
+                  <p>astrologyshweta@gmail.com</p>
                 </div>
               </span>
             </div>

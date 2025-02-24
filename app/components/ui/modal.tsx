@@ -1,55 +1,72 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import { useMediaQuery } from '@mui/material'; // Import to handle media queries
+import { IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close'; // Import close icon
+import { useMediaQuery } from '@mui/material';
 
-// Define style for the modal with mobile responsiveness
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '90%', // Default width for small screens (90% of viewport width)
-  //maxWidth: 1000, // Max width for larger screens
-  maxHeight: '90vh', // Set maximum height to 80% of the viewport height
+  width: '90%',
+  maxHeight: '90vh',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  overflowY: 'auto', // Allow vertical scrolling if content overflows
+  overflowY: 'auto',
   p: 4,
+  borderRadius: '8px', // Rounded corners for the modal
+  transition: 'transform 0.3s ease-out', // Smooth transition for appearance
 };
 
 type PackageModalProps = {
   open: boolean;
   handleClose: () => void;
-  packageComp: React.ReactNode; // Accept the component as a prop
+  packageComp: React.ReactNode;
 };
 
 const PackageModal = ({ open, handleClose, packageComp }: PackageModalProps) => {
-  // Use MediaQuery hook to detect small screens
-  const isMobile = useMediaQuery('(max-width:600px)'); // Checks if the screen width is 600px or less
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   return (
-    <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
+      <Box
+        sx={{
+          ...style,
+          width: isMobile ? '90%' : '600px',
+          maxWidth: isMobile ? '100%' : '600px',
+          maxHeight: isMobile ? '70vh' : '80vh',
+          padding: isMobile ? '16px' : '32px',
+        }}
       >
-        <Box
+        {/* Close Button */}
+        <IconButton 
+          edge="end" 
+          color="inherit" 
+          onClick={handleClose} 
           sx={{
-            ...style,
-            width: isMobile ? '90%' : '600px', // Adjust width for mobile devices
-            maxWidth: isMobile ? '100%' : '600px', // Ensure max-width stays reasonable
-            maxHeight: isMobile ? '70vh' : '80vh', // For mobile, allow slightly more height
-            padding: isMobile ? '16px' : '32px', // Less padding for mobile to fit more content
+            position: 'absolute',
+            top: 16,
+            right: 16,
+            backgroundColor: 'rgba(0, 0, 0, 0.2)',
+            '&:hover': {
+              backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            },
           }}
         >
-          {packageComp} {/* Render the component passed as prop */}
-        </Box>
-      </Modal>
-    </div>
+          <CloseIcon />
+        </IconButton>
+
+        {packageComp}
+      </Box>
+    </Modal>
   );
 };
 

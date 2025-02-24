@@ -17,7 +17,7 @@ export default function Home() {
               <h5 className="font-semibold text-lg sm:text-xl">
                 Hi, I am{" "}
                 <span className="text-[#e8c83e] text-3xl sm:text-4xl">
-                  Swetha
+                  Shweta
                 </span>
               </h5>
 
