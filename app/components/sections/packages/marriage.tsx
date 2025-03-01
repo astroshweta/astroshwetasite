@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { MARRIAGE_HEAD } from './constants';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CustomButton from '../../ui/CustomButton';
 
 const MarriageConsultation = () => {
   const handleButtonClick = () => {
@@ -91,7 +92,7 @@ const MarriageConsultation = () => {
             </ListItem>
             <ListItem>
               <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Your Top 5 Relationship Questions:</strong>} secondary="Share your specific relationship or marriage-related questions for in-depth answers." />
+              <ListItemText primary={<strong>Your Top 3 Relationship Questions:</strong>} secondary="Share your specific relationship or marriage-related questions for in-depth answers." />
             </ListItem>
           </List>
         </div>
@@ -103,15 +104,11 @@ const MarriageConsultation = () => {
           <List>
             <ListItem>
               <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Your Birth Chart PDF:</strong>} secondary="Detailed PDF containing your D1, divisional charts, planetary placements, and compatibility analysis." />
+              <ListItemText primary={<strong>Your Birth Chart PDF:</strong>} secondary="Detailed PDF containing your D1, divisional charts and planetary placements analysis." />
             </ListItem>
             <ListItem>
               <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
               <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized audio answering your questions (8-15 minutes)." />
-            </ListItem>
-            <ListItem>
-              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Written Summary:</strong>} secondary="Comprehensive written answers, including remedies and suggestions for your marriage." />
             </ListItem>
             <ListItem>
               <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
@@ -121,22 +118,11 @@ const MarriageConsultation = () => {
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <Button 
-            variant="contained" 
-            color="primary" 
-            size="large" 
+          <CustomButton  
              onClick={handleButtonClick}
-            sx={{
-              padding: '10px 20px',
-              fontSize: '1.2rem',
-              backgroundColor: '#ff1493',
-              '&:hover': {
-                backgroundColor: '#ff69b4',
-              }
-            }}
           >
             Book Now 499/-
-          </Button>
+          </CustomButton>
         </div>
       </Container>
     </section>

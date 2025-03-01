@@ -18,7 +18,7 @@ export const navLinks = [
     "Career & Finance Guidance",
     "Love & Relationship Insights",
     "Numerology & Name Correction",
-    "Palmistry & Spiritual Healing"
+    "Spiritual Healing"
   ];
 
   export const testimonials = [

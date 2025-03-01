@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { HEALTH_HEAD } from './constants';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CustomButton from '../../ui/CustomButton';
 
 const HealthConsultation = () => {
   const handleButtonClick = () => {
@@ -93,33 +94,18 @@ const HealthConsultation = () => {
               <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized 8-15 minute audio recording answering your health queries." />
             </ListItem>
             <ListItem>
-              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Written Summary:</strong>} secondary="A document covering remedies, health guidance, and analysis." />
-            </ListItem>
-            <ListItem>
               <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Delivery Timeline:</strong>} secondary="All materials will be sent via email within 24-27 days." />
+              <ListItemText primary={<strong>Delivery Timeline:</strong>} secondary="All materials will be sent via email within 5-7 days." />
             </ListItem>
           </List>
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <Button 
-            variant="contained" 
-            color="primary" 
-            size="large" 
+          <CustomButton 
             onClick={handleButtonClick}
-            sx={{
-              padding: '10px 20px',
-              fontSize: '1.2rem',
-              backgroundColor: '#ff1493',
-              '&:hover': {
-                backgroundColor: '#ff69b4',
-              }
-            }}
           >
             Book Now 499/-
-          </Button>
+          </CustomButton>
         </div>
       </Container>
     </section>

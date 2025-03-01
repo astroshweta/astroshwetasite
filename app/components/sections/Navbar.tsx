@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { navLinks } from "@/app/utils/constants";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import CustomButton from "../ui/CustomButton";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -13,36 +13,33 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const windowPos = window.scrollY;
-      if (windowPos >= 250) {
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
+      setIsFixed(window.scrollY >= 250);
     };
-    window.addEventListener("scroll", handleScroll);
 
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const handleButtonClick = () => {
+    window.open("https://rzp.io/rzp/k0bSlLD", "_blank");
+  };
+
   return (
     <header
-      className={` w-full z-30 ${
-        isFixed ? "fixed top-0 left-0 bg-[#e8c83e] is-sticky w-full" : "relative "
-      }`}
+      className={`w-full z-30 ${isFixed ? "fixed top-0 left-0 bg-[#e8c83e] is-sticky w-full" : "relative"}`}
     >
       <div className="container">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="py-2 flex items-center ms-10">
+          <div className="py-1 flex items-center ms-10">
             <Link href="/">
-              <img
+              <Image
                 src={isFixed ? "/logo2.png" : "/logo.png"}
                 alt="Logo"
                 title="Logo"
-                className="w-[70px] h-auto "
+                className="w-[50px] h-auto"
               />
             </Link>
           </div>
@@ -64,20 +61,18 @@ const Navbar = () => {
                   <Link
                     href={path}
                     className="opacity-100 block text-[13px] font-semibold relative uppercase text-foreground transition-all duration-500 ease-linear cursor-pointer hover:text-primary lg:[.is-sticky_&]:text-black [.is-sticky_&]:hover:text-foreground"
+                    onClick={() => setShowMenu(false)} // Closes the menu when a menu item is clicked
                   >
                     {label}
                   </Link>
                 </li>
               ))}
-              <CustomButton><a href="https://wa.me/6362668282" target="_blank">Consult Now</a>  </CustomButton>
+              <CustomButton onClick={handleButtonClick}>Consult Now</CustomButton>
             </ul>
           </nav>
 
           {/* Mobile Menu Icon */}
-          <div
-            className="text-white cursor-pointer lg:hidden mr-10"
-            onClick={() => setShowMenu(!showMenu)}
-          >
+          <div className="text-white cursor-pointer lg:hidden mr-10" onClick={() => setShowMenu(!showMenu)}>
             <FontAwesomeIcon icon={faBars} fontSize={25} />
           </div>
         </div>
