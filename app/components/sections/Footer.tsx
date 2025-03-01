@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container">
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-4">
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://youtube.com/@astrologywithshweta?si=17tqqGvpS1yUcuWr" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faYoutube} className="text-[#e8c83e] text-2xl hover:text-black transition duration-300" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/shweta_astro?igsh=MXgwbTRtMnVnZWt6OA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} className="text-[#e8c83e] text-2xl hover:text-black transition duration-300" />
           </a>
         </div>
