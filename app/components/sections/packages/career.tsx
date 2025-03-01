@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
+import {Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { CAREER_HEAD } from './constants';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import WorkIcon from '@mui/icons-material/Work';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import CustomButton from '../../ui/CustomButton';
 
 const CareerConsultation = () => {
   const handleButtonClick = () => {
@@ -95,15 +95,11 @@ const CareerConsultation = () => {
           <List>
             <ListItem>
               <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Your Birth Chart PDF:</strong>} secondary="Detailed PDF containing your D1, divisional charts, planetary placements, and compatibility analysis." />
+              <ListItemText primary={<strong>Your Birth Chart PDF:</strong>} secondary="Detailed PDF containing your charts & planetary placements." />
             </ListItem>
             <ListItem>
               <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized audio answering your questions (8-15 minutes)." />
-            </ListItem>
-            <ListItem>
-              <FavoriteIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
-              <ListItemText primary={<strong>Written Summary:</strong>} secondary="Comprehensive written answers, including remedies and suggestions for your marriage." />
+              <ListItemText primary={<strong>MP3 Audio Recording:</strong>} secondary="A personalized audio answering your questions (5-15 minutes)." />
             </ListItem>
             <ListItem>
               <HelpOutlineIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
@@ -113,22 +109,11 @@ const CareerConsultation = () => {
         </div>
 
         <div style={{ textAlign: 'center' }}>
-          <Button 
-            variant="contained" 
-            color="primary" 
-            size="large" 
+          <CustomButton  
             onClick={handleButtonClick}
-            sx={{
-              padding: '10px 20px',
-              fontSize: '1.2rem',
-              backgroundColor: '#ff1493',
-              '&:hover': {
-                backgroundColor: '#ff69b4',
-              }
-            }}
           >
             Book Now 499/-
-          </Button>
+          </CustomButton>
         </div>
       </Container>
     </section>

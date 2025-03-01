@@ -44,26 +44,27 @@ const PackageModal = ({ open, handleClose, packageComp }: PackageModalProps) => 
           maxWidth: isMobile ? '100%' : '600px',
           maxHeight: isMobile ? '70vh' : '80vh',
           padding: isMobile ? '16px' : '32px',
+          backgroundColor: 'aliceblue',
         }}
       >
         {/* Close Button */}
         <IconButton 
-          edge="end" 
-          color="inherit" 
-          onClick={handleClose} 
-          sx={{
-            position: 'absolute',
-            top: 16,
-            right: 16,
-            backgroundColor: 'rgba(0, 0, 0, 0.2)',
-            '&:hover': {
-              backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            },
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-
+  edge="end" 
+  color="inherit" 
+  onClick={handleClose} 
+  sx={{
+    position: 'fixed',
+    top: 10,
+    right: 10,
+    zIndex: 1301,
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    },
+  }}
+>
+  <CloseIcon />
+</IconButton>
         {packageComp}
       </Box>
     </Modal>

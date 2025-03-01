@@ -1,6 +1,6 @@
 "use client";
 import { Box } from "@mui/material";
-import Carousel from "react-slick"; // Add this for carousel functionality
+import Carousel from "react-slick"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonials, stats } from "@/app/utils/constants";
@@ -67,27 +67,47 @@ const Testimonials = () => {
         </div>
       </Box>
       <div className="mt-15">
-        <Carousel {...settings}>
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-between text-center p-6 border border-gray-600 rounded-2xl text-gray-300 w-full max-w-lg mx-auto min-h-[180px] shadow-lg h-[300px]"
-            >
-              <p className="text-lg font-light leading-relaxed flex-grow">
-                {item.review}
-              </p>
-              <div className="mt-auto flex flex-col items-center">
-                <h5 className="text-xl font-semibold text-white">
-                  {item.name}
-                </h5>
-                <p className="text-sm font-medium text-yellow-400">
-                  Consultation Review
-                </p>
-              </div>
-            </div>
-          ))}
-        </Carousel>
+  <Carousel
+    {...settings}
+    dots={true} // Ensure dots are enabled
+    appendDots={(dots) => (
+      <div style={{ position: "absolute", bottom: "-30px", width: "100%" }}>
+        <ul style={{ display: "flex", justifyContent: "center", gap: "8px" }}> 
+          {dots}
+        </ul>
       </div>
+    )}
+    customPaging={() => (
+      <div
+        style={{
+          width: "10px",
+          height: "10px",
+          backgroundColor: "white",
+          borderRadius: "50%",
+          opacity: 0.6, // Default inactive dot
+        }}
+      />
+    )}
+  >
+    {testimonials.map((item, index) => (
+      <div
+        key={index}
+        className="flex flex-col h-[300px] justify-between text-center p-6 border border-gray-600 rounded-2xl text-gray-300 w-full max-w-lg mx-auto shadow-lg"
+      >
+        <p className="text-lg font-light leading-relaxed flex-grow">
+          {item.review}
+        </p>
+
+        <div className="pt-4">
+          <h5 className="text-xl font-semibold text-white">{item.name}</h5>
+          <p className="text-sm font-medium text-yellow-400">
+            Consultation Review
+          </p>
+        </div>
+      </div>
+    ))}
+  </Carousel>
+</div>
     </>
   );
 };

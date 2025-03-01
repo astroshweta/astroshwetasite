@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Container, Typography, List, ListItem, ListItemText } from '@mui/material';
 import { DIRECT_HEAD } from './constants';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CustomButton from '../../ui/CustomButton';
 
 const DirectConsultation = () => {
   const handleButtonClick = () => {
@@ -101,22 +102,11 @@ const DirectConsultation = () => {
         </div>
 
        <div style={{ textAlign: 'center' }}>
-          <Button 
-            variant="contained" 
-            color="primary" 
-            size="large" 
+          <CustomButton 
             onClick={handleButtonClick}
-            sx={{
-              padding: '10px 20px',
-              fontSize: '1.2rem',
-              backgroundColor: '#ff1493',
-              '&:hover': {
-                backgroundColor: '#ff69b4',
-              }
-            }}
           >
             Book Now 999/-
-          </Button>
+          </CustomButton>
         </div>
       </Container>
     </section>

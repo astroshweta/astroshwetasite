@@ -6,7 +6,7 @@ import { packages } from '@/app/utils/constants';
 
 const Packages = () => {
   return (
-      <section className="mt-[140px] mb-7.5">
+      <section className="mt-[140px] mb-7.5" id="packages">
           <div className="container">
               <div className="row justify-content-center">
                   <div className="col-xl-12">
