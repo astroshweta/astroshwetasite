@@ -1,9 +1,16 @@
 export const navLinks = [
     { id: 1,label: "Home", path: "/" },
-    { id: 2,label: "About", path: "#about" },
-    { id: 3,label: "Packages", path: "#packages" },
-    { id: 4,label: "Testimonials", path: "#testimonials" }
+    { id: 2,label: "About", path: "/#about" },
+    { id: 3,label: "Packages", path: "/#packages" },
+    { id: 4,label: "Testimonials", path: "/#testimonials" }
   ];
+export const RazorPayLinks = {
+  Career : 'https://rzp.io/rzp/SaoWX6NG',
+  Health : 'https://rzp.io/rzp/uAsz2OJZ',
+  Marriage: 'https://rzp.io/rzp/p1GDFSp8',
+  Direct: 'https://rzp.io/rzp/k0bSlLD',
+  Emergency: 'https://rzp.io/rzp/KdiQDwNV',
+}
 
   export const packages = [
     { id:1, title: "Carreer Readings", price:"499", description: "Career specific questions ? Click to know more." },
