@@ -3,12 +3,8 @@ import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import CareerConsultation from "../sections/packages/career"; 
-import MarriageConsultation from "../sections/packages/marriage";
-import HealthConsultation from "../sections/packages/health";
-import DirectConsultation from "../sections/packages/DirectConsultation";
-import EmergencyConsultation from "../sections/packages/Emergency";
 import PackageModal from "./modal"; 
+import Link from "next/link";
 
 type CardPropsType = {
   title: string;
@@ -21,30 +17,31 @@ const Card = ({ title, description, id }: CardPropsType) => {
   const [openModal, setOpenModal] = useState(false);
   const [modalContent, setModalContent] = useState<React.ReactNode>(<></>);
 
-  const handleBookNow = () => {
-    switch (id) {
-      case 1:
-        setModalContent(<CareerConsultation />);
-        break;
-      case 2:
-        setModalContent(<MarriageConsultation />);
-        break;
-      case 3:
-        setModalContent(<HealthConsultation />);
-        break;
-      case 4:
-        setModalContent(<DirectConsultation />);
-        break;
-      case 5:
-        setModalContent(<EmergencyConsultation />);
-        break;
-      default:
-        setModalContent(<></>); // Default case
-        break;
-    }
-    setOpenModal(true); 
-  };
-  
+const path = () => {
+  let path
+  switch (id) {
+    case 1:
+      path = "/packages/career"
+      break;
+    case 2:
+      path = "/packages/marriage"
+      break;
+    case 3:
+      path = "/packages/health"
+      break;
+    case 4:
+      path = "/packages/direct"
+      break;
+    case 5:
+      path = "/packages/emergency"
+      break;
+    default:
+      path = "/packages/direct"; // Default case
+      break;
+  }
+  return path
+}
+
   const handleCloseModal = () => {
     setOpenModal(false);
     setModalContent(<></>);
@@ -57,12 +54,11 @@ const Card = ({ title, description, id }: CardPropsType) => {
         <h4 className="pb-6">{title}</h4>
         <p className="pb-10" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
-      <div className="py-10 lg:px-12.5 px-6" onClick={handleBookNow} id={title}>
-        <CustomButton>
-          Know More <FontAwesomeIcon icon={faAngleRight} fontSize={14} />
-        </CustomButton>
-      </div>
-
+      <div className="py-10 lg:px-12.5 px-6" id={title}>
+    <Link href={path()}>
+  <CustomButton>Know More  <FontAwesomeIcon icon={faAngleRight} fontSize={14} /></CustomButton>
+</Link>
+  </div>
       <PackageModal open={openModal} handleClose={handleCloseModal} packageComp={modalContent} />
     </div>
   );

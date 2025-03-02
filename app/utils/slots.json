@@ -1,0 +1,175 @@
+{
+    "slotsData": [
+      {
+        "date": "2024-03-03",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-04",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-05",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-06",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-07",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-08",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-09",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-10",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-11",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-12",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-13",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-14",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-15",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-16",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-17",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-18",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      },
+      {
+        "date": "2024-03-19",
+        "slots": [
+          { "time": "11:00 AM", "available": true },
+          { "time": "12:00 PM", "available": true },
+          { "time": "5:00 PM", "available": true },
+          { "time": "7:00 PM", "available": true },
+          { "time": "8:00 PM", "available": true }
+        ]
+      }
+    ]
+  }
+  
