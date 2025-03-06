@@ -15,8 +15,9 @@ const EmergencyConsultation = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <section className="consultation-section" style={{ padding: '30px' }}>
-      <Navbar/>
       <Container maxWidth="md">
         <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: 'yellow', textAlign: 'center' }}>
           {EMERGENCY_HEAD}
@@ -190,8 +191,6 @@ const EmergencyConsultation = () => {
   </ListItem>
 </List>
         </div>
-
-
         <div style={{ textAlign: 'center' }}>
           <CustomButton 
             onClick={handleButtonClick}
@@ -200,8 +199,9 @@ const EmergencyConsultation = () => {
           </CustomButton>
         </div>
       </Container>
-      <Footer/>
     </section>
+          <Footer/>
+          </>
   );
 };
 

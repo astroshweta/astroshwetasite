@@ -1,3 +1,4 @@
+"use client";
 import Packages from "./components/sections/Packages";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
@@ -7,7 +8,11 @@ import Navbar from "./components/sections/Navbar";
 import Image from "next/image";
 import { Container } from "@mui/material";
 import Footer from "./components/sections/Footer";
+import CustomButton from "./components/ui/CustomButton";
 export default function Home() {
+  const handleButtonClick = () => {
+    window.open("https://rzp.io/rzp/k0bSlLD", "_blank");
+  };
   return (
     <>
       <Navbar />
@@ -34,6 +39,7 @@ export default function Home() {
               <p className="text-slate-400 dark:text-white/60 text-base sm:text-lg max-w-xl mt-3">
               Offering personalized readings and deep insights to bring clarity, direction, and success into your life. Unlock your true potential and navigate life’s journey with confidence.
               </p>
+              <CustomButton onClick={handleButtonClick}>Consult Now</CustomButton>
             </div>
 
             <div className="relative flex justify-center md:justify-end">
@@ -53,6 +59,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+       
       </section>
 
       <section className="relative overflow-hidden md:py-24 py-16">

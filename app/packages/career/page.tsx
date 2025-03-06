@@ -17,8 +17,9 @@ const CareerConsultation = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <section className="consultation-section" style={{ padding: '30px' }}>
-        <Navbar/>
       <Container maxWidth="md">
         <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: 'yellow', textAlign: 'center' }}>
           {CAREER_HEAD}
@@ -155,12 +156,13 @@ const CareerConsultation = () => {
           <CustomButton  
             onClick={handleButtonClick}
           >
-            Book Now 399/-
+            Book Now 499/-
           </CustomButton>
         </div>
       </Container>
-      <Footer/>
     </section>
+    <Footer/>
+    </>
   );
 };
 

@@ -33,16 +33,15 @@ const About = () => {
                 <SectionTitle.Title>
                   {" "}
                   Guiding lives through the{" "}
-                  <span className="text-[#e8c83e]">wisdom</span> wisdom of the
+                  <span className="text-[#e8c83e]">wisdom</span> of the
                   stars and ancient{" "}
                   <span className="text-[#e8c83e]"> Vedic astrology.</span>
                 </SectionTitle.Title>
                 <SectionTitle.Description>
-                  Hello! I’m  <span className="text-[#e8c83e]">Shweta</span>, a dedicated astrologer with over 6
-                  years of experience in Vedic astrology and
-                  numerology. My journey began as a deep personal passion, which
-                  evolved into helping individuals find clarity, purpose, and
-                  success through celestial insights.
+                  Hello! I’m  <span className="text-[#e8c83e]">Shweta</span>, a dedicated astrologer with over 6 years of experience in Vedic astrology and numerology.
+                   My journey began as a deep personal passion, which evolved into helping individuals find clarity, purpose, and success through celestial insights.
+                    Along with my expertise in astrology, I hold an MBA, which allows me to blend intuitive wisdom with a grounded, 
+                    practical approach to guiding clients in both personal and professional aspects of life.
                 </SectionTitle.Description>
               </SectionTitle>
               <>
