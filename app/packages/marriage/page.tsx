@@ -16,9 +16,9 @@ const MarriageConsultation = () => {
     window.open(RazorPayLinks.Marriage, '_blank');
   };
 
-  return (
-    <section className="consultation-section" style={{ padding: '30px' }}>
+  return (<>
       <Navbar/>
+    <section className="consultation-section" style={{ padding: '30px' }}>
       <Container maxWidth="md">
         <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: 'yellow', textAlign: 'center' }}>
           {MARRIAGE_HEAD}
@@ -196,8 +196,8 @@ const MarriageConsultation = () => {
   <ListItem>
     <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
     <ListItemText 
-      primary={<strong style={{ color: 'white' }}>Health Chart PDF:</strong>}
-      secondary="A comprehensive PDF detailing your birth chart and health analysis."
+      primary={<strong style={{ color: 'white' }}>Basic Kundali Chart PDF:</strong>}
+      secondary="A comprehensive PDF detailing your birth chart."
       sx={{
         '& .MuiTypography-body2': {
           color: '#d3d3d3',
@@ -209,7 +209,7 @@ const MarriageConsultation = () => {
     <EventAvailableIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
     <ListItemText 
       primary={<strong style={{ color: 'white' }}>MP3 Audio Recording:</strong>}
-      secondary="A personalized 8-15 minute audio recording answering your health queries."
+      secondary="A personalized 8-15 minute audio recording answering your marriage/relationship queries."
       sx={{
         '& .MuiTypography-body2': {
           color: '#d3d3d3',
@@ -237,12 +237,13 @@ const MarriageConsultation = () => {
           <CustomButton  
              onClick={handleButtonClick}
           >
-            Book Now 499/-
+            Book Now 599/-
           </CustomButton>
         </div>
       </Container>
-      <Footer/>
     </section>
+          <Footer/>
+          </>
   );
 };
 

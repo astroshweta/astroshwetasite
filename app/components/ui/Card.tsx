@@ -56,7 +56,7 @@ const path = () => {
       </div>
       <div className="py-10 lg:px-12.5 px-6" id={title}>
     <Link href={path()}>
-  <CustomButton>Know More  <FontAwesomeIcon icon={faAngleRight} fontSize={14} /></CustomButton>
+  <CustomButton>Book Now<FontAwesomeIcon icon={faAngleRight} fontSize={14} /></CustomButton>
 </Link>
   </div>
       <PackageModal open={openModal} handleClose={handleCloseModal} packageComp={modalContent} />

@@ -15,7 +15,6 @@ export const RazorPayLinks = {
   export const packages = [
     { id:1, title: "Carreer Readings", price:"499", description: "Career specific questions ? Click to know more." },
     { id:2, title: "Marriage Readings",price:"499", description: "Marriage/Relationship specific questions ? Click to know more." },
-    { id:3, title: "Health Readings", price:"499",  description: "Health specific questions ? Click to know more." },
     { id:4, title: "Direct Consulations",price:"999", description: "Have multiple Questions ? Want personal consultation call/chat with me (Shweta) ?" },
     { id:5, title: "Emergency Consulations",price:"1999", description: "Can't wait for slot ? Want same day personal consultation call with me (Shweta) ?" },
   ];

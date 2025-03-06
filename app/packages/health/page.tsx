@@ -156,8 +156,8 @@ const HealthConsultation = () => {
   <ListItem>
     <CheckCircleIcon sx={{ color: '#ff1493', marginRight: '10px' }} />
     <ListItemText 
-      primary={<strong style={{ color: 'white' }}>Health Chart PDF:</strong>}
-      secondary="A comprehensive PDF detailing your birth chart and health analysis."
+      primary={<strong style={{ color: 'white' }}>Basic Kundali Chart PDF:</strong>}
+      secondary="A comprehensive PDF detailing your birth chart"
       sx={{
         '& .MuiTypography-body2': {
           color: '#d3d3d3',
@@ -197,7 +197,7 @@ const HealthConsultation = () => {
           <CustomButton 
             onClick={handleButtonClick}
           >
-            Book Now 399/-
+            Book Now 499/-
           </CustomButton>
         </div>
       </Container>

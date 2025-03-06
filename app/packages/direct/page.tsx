@@ -17,8 +17,9 @@ const DirectConsultation = () => {
   };
 
   return (
+    <>
+          <Navbar/>
     <section className="consultation-section" style={{ padding: '30px' }}>
-      <Navbar/>
       <Container maxWidth="md">
         <Typography variant="h3" component="h2" gutterBottom style={{ fontWeight: 'bold', color: 'yellow', textAlign: 'center' }}>
           {DIRECT_HEAD}
@@ -110,12 +111,13 @@ const DirectConsultation = () => {
           <CustomButton 
             onClick={handleButtonClick}
           >
-            Book Now 799/-
+            Book Now 999/-
           </CustomButton>
         </div>
       </Container>
-      <Footer/>
     </section>
+    <Footer/>
+</>
 
   );
 };
