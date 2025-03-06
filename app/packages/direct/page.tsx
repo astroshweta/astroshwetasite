@@ -118,6 +118,7 @@ const DirectConsultation = () => {
     </section>
     <Footer/>
 </>
+
   );
 };
 
