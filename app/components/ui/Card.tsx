@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import PackageModal from "./modal"; 
 import Link from "next/link";
+import { RazorPayLinks } from "@/app/utils/constants";
 
 type CardPropsType = {
   title: string;
@@ -21,22 +22,22 @@ const path = () => {
   let path
   switch (id) {
     case 1:
-      path = "/packages/career"
+      path = RazorPayLinks.Career
       break;
     case 2:
-      path = "/packages/marriage"
+      path = RazorPayLinks.Marriage
       break;
     case 3:
-      path = "/packages/health"
+      path = RazorPayLinks.Health
       break;
     case 4:
-      path = "/packages/direct"
+      path = RazorPayLinks.Direct
       break;
     case 5:
-      path = "/packages/emergency"
+      path = RazorPayLinks.Emergency
       break;
     default:
-      path = "/packages/direct"; // Default case
+      path = RazorPayLinks.Direct; // Default case
       break;
   }
   return path
